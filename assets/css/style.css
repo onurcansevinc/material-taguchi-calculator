@@ -1,0 +1,89 @@
+.hucre {
+    text-align: center;
+    max-width: 50px;
+    border: none;
+}
+
+.baslik {
+    display: block;
+    width: 120px;
+    text-align: center;
+    border: none;
+    margin: 10px;
+}
+
+input {
+     text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+.number {
+    max-width: 50px;
+}
+
+.text {
+    text-align: center;
+}
+
+.inputCl1 {
+    text-align: center;
+    max-width: 50px;
+    border: none;
+}
+
+.inputCl2 {
+    text-align: center;
+    max-width: 50px;
+    border: none;
+}
+
+.inputCl3 {
+    text-align: center;
+    max-width: 50px;
+    border: none;
+}
+
+.inputCl4 {
+    text-align: center;
+    max-width: 50px;
+    border: none;
+}
+
+.inputCl5 {
+    text-align: center;
+    max-width: 50px;
+    border: none;
+}
+
+.inputCl6 {
+    text-align: center;
+    max-width: 50px;
+    border: none;
+}
+
+.inputCl7 {
+    text-align: center;
+    max-width: 50px;
+    border: none;
+}
+
+.inputCl8 {
+    text-align: center;
+    max-width: 50px;
+    border: none;
+}
+
+.inputCl9 {
+    text-align: center;
+    max-width: 50px;
+    border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

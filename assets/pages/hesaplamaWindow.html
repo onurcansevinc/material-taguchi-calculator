@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-dm-8 offset-2 text-center">
+                <h5>İstenilen Atomik % Değerleri</h5>
+                <button id="ekle" type="button" class="btn btn-primary">Ekle</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6" style="margin-left: 300px;">
+                            <a id="myDiv0"></a>
+                            <table cellspacing="0" border="0" cellpadding="5" cellspacing="5">
+                                <tr>
+                                    <td><a id="myDiv1"></a></td>
+                                    <td><input id="input0" type="number" style="display: none;" name="input0" step="0.01"></td>
+                                </tr>
+                                <tr>
+                                    <td><a id="myDiv2"></a></td>
+                                    <td><input id="input1" type="number" style="display: none;" name="input1" step="0.01"></td>
+                                </tr>
+                                <tr>
+                                    <td><a id="myDiv3"></a></td>
+                                    <td><input id="input2" type="number" style="display: none;" name="input2" step="0.01"></td>
+                                </tr>
+                                <tr>
+                                    <td><a id="myDiv4"></a></td>
+                                    <td><input id="input3" type="number" style="display: none;" name="input3" step="0.01"></td>
+                                </tr>
+                                <tr>
+                                    <td><a id="myDiv5"></a></td>
+                                    <td><input id="input4" type="number" style="display: none;" name="input4" step="0.01"></td>
+                                </tr>
+                                <tr>
+                                    <td><a id="myDiv6"></a></td>
+                                    <td><input id="input5" type="number" style="display: none;" name="input5" step="0.01"></td>
+                                </tr>
+                                <tr>
+                                    <td><a id="myDiv7"></a></td>
+                                    <td><input id="input6" type="number" style="display: none;" name="input6" step="0.01"></td>
+                                </tr>
+                                <tr>
+                                    <td><a id="myDiv8"></a></td>
+                                    <td><input id="input7" type="number" style="display: none;" name="input7" step="0.01"></td>
+                                </tr>
+                                <tr>
+                                    <td><a id="myDiv9"></a></td>
+                                    <td><input id="input8" type="number" style="display: none;" name="input8" step="0.01"></td>
+                                </tr>
+                                <tr>
+                                    <td><a id="myDiv10"></a></td>
+                                    <td><input id="input9" type="number" style="display: none;" name="input9" step="0.01"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <h5>Kullanılacak Bileşikler</h5>
+                <button id="eklebilesik" type="button" class="btn btn-primary">Ekle</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px;">
+                        <table cellspacing="0" border="0" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td><a id="myDivbilesik0"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDivbilesik1"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDivbilesik2"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDivbilesik3"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDivbilesik4"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDivbilesik5"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDivbilesik6"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDivbilesik7"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv9"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv10"></a></td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+                <button id="hesapla" type="button" class="btn btn-primary" style="height: 150px; width: 900px; margin-top: 100px;">Hesapla</button>
+            </div>
+        </div>
+    </div>
+    <section id="savebox" style="display: none; position: absolute; top: 50%; left: 54%; transform: translate(-50%, -50%);">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="takaslink">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none;">
+                        <span onclick="cancel_gift()">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="height: 250px; width: 500px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-sm-offset-5 text-center">
+                                <div>
+                                    <label for="sonuc1" id="labelsonuc1" style="display: none;"></label>
+                                    <input disabled type="number" name="sonuc1" id="sonuc1" style="margin-top: 13px; display: none; text-align: center; margin-left: auto; margin-right: auto;">
+                                </div>
+                                <div>
+                                    <label for="sonuc2" id="labelsonuc2" style="display: none;"></label>
+                                    <input disabled type="number" name="sonuc2" id="sonuc2" style="margin-top: 13px; display: none; text-align: center; margin-left: auto; margin-right: auto;">
+                                </div>
+                                <div>
+                                    <label for="sonuc3" id="labelsonuc3" style="display: none;"></label>
+                                    <input disabled type="number" name="sonuc3" id="sonuc3" style="margin-top: 13px; display: none; text-align: center; margin-left: auto; margin-right: auto;">
+                                </div>
+                                <div>
+                                    <label for="sonuc4" id="labelsonuc4" style="display: none;"></label>
+                                    <input disabled type="number" name="sonuc4" id="sonuc4" style="margin-top: 13px; display: none; text-align: center; margin-left: auto; margin-right: auto;">
+                                </div>
+                                <div>
+                                    <label for="sonuc5" id="labelsonuc5" style="display: none;"></label>
+                                    <input disabled type="number" name="sonuc5" id="sonuc5" style="margin-top: 13px; display: none; text-align: center; margin-left: auto; margin-right: auto;">
+                                </div>
+                                <div>
+                                    <label for="sonuc6" id="labelsonuc6" style="display: none;"></label>
+                                    <input disabled type="number" name="sonuc6" id="sonuc6" style="margin-top: 13px; display: none; text-align: center; margin-left: auto; margin-right: auto;">
+                                </div>
+                                <div>
+                                    <label for="sonuc7" id="labelsonuc7" style="display: none;"></label>
+                                    <input disabled type="number" name="sonuc7" id="sonuc7" style="margin-top: 13px; display: none; text-align: center; margin-left: auto; margin-right: auto;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const electron = require("electron");
+        const remote = require('electron').remote;
+
+        const {
+            ipcRenderer
+        } = electron;
+
+        let eklebutton = document.getElementById("ekle");
+        let hesaplabutton = document.getElementById("hesapla");
+        let bilesikeklebutton = document.getElementById("eklebilesik");
+
+        let buttonNumber = 0;
+        let bilesikbuttonNumber = 0;
+
+        eklebutton.addEventListener("click", () => {
+            if (buttonNumber < 10) {
+                document.getElementById("input" + buttonNumber).style.display = "block";
+                document.getElementById("myDiv" + buttonNumber).style.display = "block";
+                ipcRenderer.send("key:NewElement" + buttonNumber);
+
+                ipcRenderer.on("todo:list" + buttonNumber, (e, todoItems) => {
+                    var myDiv = document.getElementById("myDiv" + buttonNumber);
+                    var selectList = "selectList" + buttonNumber;
+
+                    selectList = document.createElement("select");
+                    selectList.setAttribute("id", "mySelect" + buttonNumber);
+                    myDiv.appendChild(selectList);
+
+                    for (var i = 0; i < todoItems.length; i++) {
+                        var option = document.createElement("option");
+                        option.setAttribute("value", todoItems[i]);
+                        option.text = todoItems[i];
+
+                        selectList.appendChild(option);
+                    }
+                });
+                buttonNumber++;
+            }
+        });
+
+        bilesikeklebutton.addEventListener("click", () => {
+            if (bilesikbuttonNumber < 7) {
+                //document.getElementById("inputbilesik" + bilesikbuttonNumber).style.display = "block";
+                document.getElementById("myDivbilesik" + bilesikbuttonNumber).style.display = "block";
+                ipcRenderer.send("key:NewBilesik" + bilesikbuttonNumber);
+
+                ipcRenderer.on("todo:bilesiklist" + bilesikbuttonNumber, (e, todoItems) => {
+                    var myDiv = document.getElementById("myDivbilesik" + bilesikbuttonNumber);
+                    var selectList = "selectListbilesik" + bilesikbuttonNumber;
+
+                    selectList = document.createElement("select");
+                    selectList.setAttribute("id", "mySelectbilesik" + bilesikbuttonNumber);
+                    myDiv.appendChild(selectList);
+
+                    for (var i = 0; i < todoItems.length; i++) {
+                        var option = document.createElement("option");
+                        option.setAttribute("value", todoItems[i]);
+                        option.text = todoItems[i];
+
+                        selectList.appendChild(option);
+                    }
+                });
+                bilesikbuttonNumber++;
+            }
+        });
+
+        hesaplabutton.addEventListener("click", () => {
+            var json = {};
+            var json2 = {};
+            for (var i = 0; i < buttonNumber;) {
+                var l = i;
+                i = i + 1;
+                var selectedVal = document.getElementById("mySelect" + i).value;
+                var inputVal = document.getElementById("input" + l).value;
+                json[selectedVal] = inputVal;
+            }
+
+            for (var i = 0; i < bilesikbuttonNumber;) {
+                i = i + 1;
+                var selectedValB = document.getElementById("mySelectbilesik" + i).value;
+                json2[selectedValB] = 0;
+            }
+            ipcRenderer.send("Hesapla:hesapla", json, json2);
+        });
+
+        ipcRenderer.on("todo:test", (e, sonuc) => {
+            var number = 0;
+            document.getElementById("savebox").style.display = "block";
+            for (var key in sonuc) {
+                number++;
+                console.log(sonuc[key])
+                document.getElementById("labelsonuc" + number).innerHTML = key;
+                document.getElementById("sonuc" + number).value = sonuc[key];
+                document.getElementById("labelsonuc" + number).style.display = "block";
+                document.getElementById("sonuc" + number).style.display = "block";
+            }
+        });
+
+        function cancel_gift() {
+            document.getElementById("savebox").style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>

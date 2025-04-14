@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <h2 style="display: block; margin-top: 100px; margin-left: auto; margin-right: auto; text-align: center;">Seviye Sayısı Seçiniz</h2>
+                <select id="seviye" style="text-align-last:left; padding-left: 10px; display: block; margin-left: auto; margin-right: auto; width: 120px;" onchange="SeviyeSelected()">
+                    <option value="l8" disabled selected>------------</option>
+                    <option value="2">S2</option>
+                    <option value="3">S3</option>
+                    <option value="4">S4</option>
+                    <option value="5">S5</option>
+                </select>
+
+                <h2 style="display: block; margin-left: auto; margin-right: auto; text-align: center;">Parametre Sayısı Seçiniz</h2>
+                <select id="parametre" style="text-align-last:left; padding-left: 10px; display: block; margin-left: auto; margin-right: auto; width: 120px;">
+                    <option value="l8" disabled selected>------------</option>
+                </select>
+                <button id="kaydet" type="button" class="btn btn-primary" style="display: block; margin-left: auto; margin-right: auto; margin-top: 30px;">Seç</button>
+                <div class="row">
+                    <div id="7parametre" style="display: block; margin-left: auto; margin-right: auto; display: none;">
+                        <table style="margin-top: 100px;" cellspacing="0" border="1" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td>1. Parametre</td>
+                                <td>2. Parametre</td>
+                                <td>3. Parametre</td>
+                                <td>4. Parametre</td>
+                                <td>5. Parametre</td>
+                                <td>6. Parametre</td>
+                                <td>7. Parametre</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="A" id="7-inputA"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="B" id="7-inputB"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="C" id="7-inputC"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="D" id="7-inputD"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="E" id="7-inputE"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="F" id="7-inputF"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="G" id="7-inputG"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="6parametre" style="display: block; margin-left: auto; margin-right: auto; display: none;">
+                        <table style="margin-top: 100px;" cellspacing="0" border="1" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td>1. Parametre</td>
+                                <td>2. Parametre</td>
+                                <td>3. Parametre</td>
+                                <td>4. Parametre</td>
+                                <td>5. Parametre</td>
+                                <td>6. Parametre</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="A" id="6-inputA"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="B" id="6-inputB"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="C" id="6-inputC"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="D" id="6-inputD"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="E" id="6-inputE"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="F" id="6-inputF"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="5parametre" style="display: block; margin-left: auto; margin-right: auto; display: none;">
+                        <table style="margin-top: 100px;" cellspacing="0" border="1" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td>1. Parametre</td>
+                                <td>2. Parametre</td>
+                                <td>3. Parametre</td>
+                                <td>4. Parametre</td>
+                                <td>5. Parametre</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="A" id="5-inputA"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="B" id="5-inputB"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="C" id="5-inputC"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="D" id="5-inputD"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="E" id="5-inputE"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="4parametre" style="display: block; margin-left: auto; margin-right: auto; display: none;">
+                        <table style="margin-top: 100px;" cellspacing="0" border="1" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td>1. Parametre</td>
+                                <td>2. Parametre</td>
+                                <td>3. Parametre</td>
+                                <td>4. Parametre</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="A" id="4-inputA"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="B" id="4-inputB"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="C" id="4-inputC"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="D" id="4-inputD"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="3parametre" style="display: block; margin-left: auto; margin-right: auto; display: none;">
+                        <table style="margin-top: 100px;" cellspacing="0" border="1" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td>1. Parametre</td>
+                                <td>2. Parametre</td>
+                                <td>3. Parametre</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 120px;"><input style="width: 120px;" placeholder="A" id="3-inputA"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="B" id="3-inputB"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="C" id="3-inputC"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="2parametre" style="display: block; margin-left: auto; margin-right: auto; display: none;">
+                        <table style="margin-top: 100px;" cellspacing="0" border="1" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td>1. Parametre</td>
+                                <td>2. Parametre</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="A" id="2-inputA"></td>
+                                <td style="width: 120px;"><input style="max-width: 120px;" placeholder="B" id="2-inputB"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <button id="kaydetParameters" type="button" class="btn btn-primary" style="display: block; margin-left: auto; margin-right: auto; display: none; margin-top: 50px;">Kaydet</button>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    const electron = require("electron");
+    const remote = require('electron').remote;
+    var firstclick = 0;
+    const {
+        ipcRenderer
+    } = electron;
+
+    let kaydetbutton = document.getElementById("kaydet");
+    kaydetbutton.addEventListener("click", () => {
+        if (firstclick > 0) {
+            window.location.reload();
+        } else {
+
+            firstclick = ++firstclick;
+            var selectedP = document.getElementById("parametre");
+            var valueP = selectedP.options[selectedP.selectedIndex].value;
+            document.getElementById(valueP + "parametre").style.display = "block";
+            document.getElementById("kaydetParameters").style.display = "block";
+        }
+    });
+
+    function SeviyeSelected() {
+        var selectedS = document.getElementById("seviye");
+        var valueS = selectedS.options[selectedS.selectedIndex].value;
+
+        var selectedP = document.getElementById("parametre");
+        removeOptions(selectedP);
+
+        if (valueS == 2) {
+            for (var i = 2; i < 8; i++) {
+                $('#parametre').append($('<option>', {
+                    value: i,
+                    text: 'P' + i
+                }));
+            }
+        } else if (valueS == 3) {
+            for (var i = 2; i < 5; i++) {
+                $('#parametre').append($('<option>', {
+                    value: i,
+                    text: 'P' + i
+                }));
+            }
+        } else if (valueS == 4) {
+            for (var i = 2; i < 6; i++) {
+                $('#parametre').append($('<option>', {
+                    value: i,
+                    text: 'P' + i
+                }));
+            }
+        } else if (valueS == 5) {
+            for (var i = 2; i < 7; i++) {
+                $('#parametre').append($('<option>', {
+                    value: i,
+                    text: 'P' + i
+                }));
+            }
+        }
+    }
+
+    function removeOptions(selectbox) {
+        var i;
+        for (i = selectbox.options.length - 1; i >= 0; i--) {
+            selectbox.remove(i);
+        }
+    }
+
+    let gobutton = document.getElementById("kaydetParameters");
+    gobutton.addEventListener("click", () => {
+        var selectedS = document.getElementById("seviye");
+        var valueS = selectedS.options[selectedS.selectedIndex].value;
+
+        var selectedP = document.getElementById("parametre");
+        var valueP = selectedP.options[selectedP.selectedIndex].value;
+        var parameters = [];
+        if (valueP == 2) {
+            var A = document.getElementById(valueP + "-inputA").value;
+            var B = document.getElementById(valueP + "-inputB").value;
+            parameters.push(A, B);
+            ipcRenderer.send("taguchi:goWParameters", parameters, valueS, valueP);
+        } else if (valueP == 3) {
+            var A = document.getElementById(valueP + "-inputA").value;
+            var B = document.getElementById(valueP + "-inputB").value;
+            var C = document.getElementById(valueP + "-inputC").value;
+            parameters.push(A, B, C);
+            ipcRenderer.send("taguchi:goWParameters", parameters, valueS, valueP);
+        } else if (valueP == 4) {
+            var A = document.getElementById(valueP + "-inputA").value;
+            var B = document.getElementById(valueP + "-inputB").value;
+            var C = document.getElementById(valueP + "-inputC").value;
+            var D = document.getElementById(valueP + "-inputD").value;
+            parameters.push(A, B, C, D);
+            ipcRenderer.send("taguchi:goWParameters", parameters, valueS, valueP);
+        } else if (valueP == 5) {
+            var A = document.getElementById(valueP + "-inputA").value;
+            var B = document.getElementById(valueP + "-inputB").value;
+            var C = document.getElementById(valueP + "-inputC").value;
+            var D = document.getElementById(valueP + "-inputD").value;
+            var E = document.getElementById(valueP + "-inputE").value;
+            parameters.push(A, B, C, D, E);
+            ipcRenderer.send("taguchi:goWParameters", parameters, valueS, valueP);
+        } else if (valueP == 6) {
+            var A = document.getElementById(valueP + "-inputA").value;
+            var B = document.getElementById(valueP + "-inputB").value;
+            var C = document.getElementById(valueP + "-inputC").value;
+            var D = document.getElementById(valueP + "-inputD").value;
+            var E = document.getElementById(valueP + "-inputE").value;
+            var F = document.getElementById(valueP + "-inputF").value;
+            parameters.push(A, B, C, D, E, F);
+            ipcRenderer.send("taguchi:goWParameters", parameters, valueS, valueP);
+        } else if (valueP == 7) {
+            var A = document.getElementById(valueP + "-inputA").value;
+            var B = document.getElementById(valueP + "-inputB").value;
+            var C = document.getElementById(valueP + "-inputC").value;
+            var D = document.getElementById(valueP + "-inputD").value;
+            var E = document.getElementById(valueP + "-inputE").value;
+            var F = document.getElementById(valueP + "-inputF").value;
+            var G = document.getElementById(valueP + "-inputG").value;
+            console.log(A, B, C, D, E, F, G)
+            parameters.push(A, B, C, D, E, F, G);
+            ipcRenderer.send("taguchi:goWParameters", parameters, valueS, valueP);
+        }
+    });
+
+</script>
+
+</html>

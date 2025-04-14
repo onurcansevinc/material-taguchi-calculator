@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/style.css">    
+    <script src="../js/jquery-3.4.1.min.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col-md text-center">
+                <h5 style="margin-top: 50px;">Bileşik Tanımlama</h5>
+                <button id="hesapla" type="button" class="btn btn-primary" style="height: 150px; width: 900px; margin-top: 50px; margin-bottom: 25px;">Ekle</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6" style="margin-left: 300px;">                        
+                        <a id="myDiv0"></a>
+                        <table cellspacing="0" border="0" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td><a id="myDiv1"></a></td>
+                                <td><input id="input0" type="number" style="display: none;" name="input0" step="0.01"></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv2"></a></td>
+                                <td><input id="input1" type="number" style="display: none;" name="input1" step="0.01"></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv3"></a></td>
+                                <td><input id="input2" type="number" style="display: none;" name="input2" step="0.01"></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv4"></a></td>
+                                <td><input id="input3" type="number" style="display: none;" name="input3" step="0.01"></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv5"></a></td>
+                                <td><input id="input4" type="number" style="display: none;" name="input4" step="0.01"></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv6"></a></td>
+                                <td><input id="input5" type="number" style="display: none;" name="input5" step="0.01"></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv7"></a></td>
+                                <td><input id="input6" type="number" style="display: none;" name="input6" step="0.01"></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv8"></a></td>
+                                <td><input id="input7" type="number" style="display: none;" name="input7" step="0.01"></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv9"></a></td>
+                                <td><input id="input8" type="number" style="display: none;" name="input8" step="0.01"></td>
+                            </tr>
+                            <tr>
+                                <td><a id="myDiv10"></a></td>
+                                <td><input id="input9" type="number" style="display: none;" name="input9" step="0.01"></td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+                <button id="save" type="button" class="btn btn-primary" style="height: 150px; width: 900px;">Kaydet</button>
+            </div>
+            <div class="col-md"></div>
+
+        </div>
+    </div>
+    <section id="savebox" style="display: none; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="takaslink">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="outline:none;">
+                        <span onclick="cancel_gift()">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="height: 200px; width: 500px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-sm-offset-5 text-center">
+                                <p style="font-size:16px; margin-top: 40px;">Alaşımı ne isimle adlandırmak istiyorsunuz ?<br>
+                                    <input type="text" name="savename" id="savename" style="margin-top: 10px;">
+                                    <div>
+                                        <button id="kaydet" type="button" class="btn btn-primary" style="">Kaydet</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-sm-offset-5 text-center">
+                                <div style="padding: 10px; top: 10px;">
+                                    <button class="btn btn-warning" id="get_gift" style="display: none;"><i class="fas fa-gift"></i> Ödülü Al</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const electron = require("electron");
+        const remote = require('electron').remote;
+
+        const {
+            ipcRenderer
+        } = electron;
+
+        let firstbutton = document.getElementById("hesapla");
+        let savebutton = document.getElementById("save");
+        let kaydetbutton = document.getElementById("kaydet");
+
+        let buttonNumber = 0;
+
+        firstbutton.addEventListener("click", () => {
+            if (buttonNumber < 7) {
+                document.getElementById("input" + buttonNumber).style.display = "block";
+                document.getElementById("myDiv" + buttonNumber).style.display = "block";
+                ipcRenderer.send("key:NewElement" + buttonNumber);
+
+                ipcRenderer.on("todo:list" + buttonNumber, (e, todoItems) => {
+                    var myDiv = document.getElementById("myDiv" + buttonNumber);
+                    var selectList = "selectList" + buttonNumber;
+
+                    selectList = document.createElement("select");
+                    selectList.setAttribute("id", "mySelect" + buttonNumber);
+                    myDiv.appendChild(selectList);
+
+                    for (var i = 0; i < todoItems.length; i++) {
+                        var option = document.createElement("option");
+                        option.setAttribute("value", todoItems[i]);
+                        option.text = todoItems[i];
+
+                        selectList.appendChild(option);
+                    }
+                });
+                buttonNumber++;
+            }
+        });
+
+        savebutton.addEventListener("click", () => {
+            document.getElementById("savebox").style.display = "block";
+            /*var json = {};
+            for (var i = 0; i < buttonNumber;) {
+                var l = i;
+                i = i+1;
+                var selectedVal = document.getElementById("mySelect"+i).value;
+                var inputVal = document.getElementById("input"+l).value;
+                json[selectedVal] = inputVal;
+            }
+            ipcRenderer.send("Bilesik:Save", json, "Baba");*/
+        });
+
+        kaydetbutton.addEventListener("click", () => {
+            var json = {};
+            var name = document.getElementById("savename").value;
+            for (var i = 0; i < buttonNumber;) {
+                var l = i;
+                i = i + 1;
+                var selectedVal = document.getElementById("mySelect" + i).value;
+                var inputVal = document.getElementById("input" + l).value;
+                json[selectedVal] = inputVal;
+            }
+            ipcRenderer.send("Bilesik:Save", json, name);
+            var window = remote.getCurrentWindow();
+            window.close();
+        });
+
+        function cancel_gift() {
+            document.getElementById("savebox").style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>

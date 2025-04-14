@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.css">
+</head>
+
+<body>
+    <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md"></div>
+                <div class="col-md">
+                    <div style="height: 150px;"></div>
+                    <button id="hesapla" type="button" class="btn btn-primary" style="height: 120px; width: 900px;">Alaşım Hesabı Yap</button>
+                    <button id="ekle" type="button" class="btn btn-primary" style="height: 120px; width: 900px; margin-top: 50px;">Alaşım Hesabı İçin Bileşik Ekle</button>
+                    <button id="taguchi" type="button" class="btn btn-primary" style="height: 120px; width: 900px; margin-top: 50px;">Taguchi Deneysel Tasarım Metodu</button>
+                    <button id="quit" type="button" class="btn btn-primary" style="height: 120px; width: 900px; margin-top: 50px;">Çıkış Yap</button>
+                </div>
+                <div class="col-md"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const electron = require("electron");
+    const {
+        ipcRenderer
+    } = electron;
+
+    let hesapla = document.getElementById("hesapla");
+    let ekle = document.getElementById("ekle");
+    let taguchi = document.getElementById("taguchi");
+    let quit = document.getElementById("quit");
+
+    hesapla.addEventListener("click", () => {
+        ipcRenderer.send("key:newHesapla");
+    });
+
+    ekle.addEventListener("click", () => {
+        ipcRenderer.send("key:newBilesik");
+    });
+
+    taguchi.addEventListener("click", () => {
+        ipcRenderer.send("key:newTaguchi");
+    });
+
+    quit.addEventListener("click", () => {
+        ipcRenderer.send("key:closeApp");
+    });
+</script>
+
+</html>
