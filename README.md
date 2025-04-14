@@ -67,27 +67,25 @@ Uygulama üç ana modüle sahiptir:
 -   `/data`: JSON veritabanları ve kaydedilmiş hesaplamalar
 -   `index.js`: Ana uygulama giriş noktası
 
+## 📸 Ekran Görüntüleri
+
+### Ana Ekran
+
+![Ana Ekran](/screenshots/main-screen.png)
+
+### Periyodik Tablo
+
+![Periyodik Tablo](/screenshots/periodic-table.png)
+
+### Kompozisyon Hesaplayıcı
+
+![Kompozisyon Hesaplayıcı](/screenshots/composition-calculator.png)
+
+### Taguchi Analizi
+
+![Taguchi Analizi](/screenshots/taguchi-analysis.png)
+
 ## 👨‍💻 Geliştiriciler
 
 -   Onur Can Sevinç
 -   Berk Ceyhan
-
-🎓 Metalurji ve Malzeme Mühendisliği Projesi: 2020'de Geliştirdiğim Masaüstü Uygulama
-Geçmiş projelerime göz atarken, 2020 yılında mühendislik eğitimim sırasında geliştirdiğimiz bu çalışmayı paylaşmak istedim. @Berk Ceyhan ile birlikte geliştirdiğimiz bu proje, mühendislik bilgimizi yazılım dünyasıyla birleştiren ilk ciddi çalışmamız oldu. Electron.js öğrenme sürecimin ilk uygulaması olan bu masaüstü programı, malzeme bilimi alanında karmaşık hesaplamaları kolaylaştırmak amacıyla tasarladık.
-💻 Teknik Özellikler:
-• Periyodik Tablo Entegrasyonu: Elementlerin atomik ağırlık ve diğer özelliklerinin JSON formatında veritabanı
-• Malzeme Kompozisyon Hesaplayıcı: Alaşım formülasyonları için ağırlık ve yüzde hesaplamaları
-• Taguchi Metodu Modülü: Deney tasarımı ve optimizasyon için parametrik analiz aracı
-• Veri Yönetimi: Formülasyonları kaydetme ve geri çağırma özelliği
-🔧 Kullanılan Teknolojiler:
-• Electron.js (Cross-platform masaüstü uygulaması)
-• Node.js (Veri işleme ve hesaplama)
-• HTML/CSS/JavaScript (Kullanıcı arayüzü)
-• JSON (Veri saklama)
-🌱 Yazılım Yolculuğuma Katkıları:
-• Gerçek dünya mühendislik problemlerine yazılım çözümleri geliştirme deneyimi
-• Modern JavaScript ve masaüstü uygulama mimarisi hakkında pratik bilgi
-• Takım çalışması ve proje yönetimi becerileri
-• Teknik bilginin yazılım aracılığıyla uygulanabilir çözümlere dönüştürülmesi
-Bu proje, metalurji alanındaki uzmanlığımızı dijital çözümlerle birleştirerek akademik ve profesyonel alanda kullanılabilecek bir araç geliştirme deneyimi oldu.
-#MaterialsEngineering #SoftwareDevelopment #ElectronJS #EngineeringTools #TaguchiMethod #CrossPlatformDevelopment
