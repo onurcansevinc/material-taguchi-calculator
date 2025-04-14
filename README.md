@@ -1,4 +1,4 @@
-# 🔬 MaterialSciDesignProject
+# 🔬 Material Taguchi Calculator
 
 2019 yılında mühendislik tasarım projesi olarak ElectronJS ile geliştirilen, malzeme bilimi ve metalurji hesaplamaları için masaüstü uygulaması.
 
@@ -32,13 +32,13 @@ Bu uygulama, malzeme mühendisliği eğitimi sırasında malzeme bilimi ve metal
 1. Bu depoyu klonlayın
 
 ```
-git clone https://github.com/onurcansevinc/MaterialSciDesignProject.git
+git clone https://github.com/onurcansevinc/material-taguchi-calculator.git
 ```
 
 2. Proje dizinine gidin
 
 ```
-cd MaterialSciDesignProject
+cd material-taguchi-calculator
 ```
 
 3. Bağımlılıkları yükleyin
