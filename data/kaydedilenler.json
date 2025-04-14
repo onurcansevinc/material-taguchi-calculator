@@ -1,0 +1,17 @@
+{
+    "kaydedilenler": [
+        { "isim": "FerroB", "madde": "Aluminum", "yüzde": "0.08" },
+        { "isim": "FerroB", "madde": "Boron", "yüzde": "18.58" },
+        { "isim": "FerroB", "madde": "Carbon", "yüzde": "0.31" },
+        { "isim": "FerroB", "madde": "Iron", "yüzde": "80.60" },
+        { "isim": "FerroB", "madde": "Phosphorus", "yüzde": "0.03" },
+        { "isim": "FerroB", "madde": "Silicon", "yüzde": "0.39" },
+        { "isim": "FerroW", "madde": "Carbon", "yüzde": "0.11" },
+        { "isim": "FerroW", "madde": "Iron", "yüzde": "21.06" },
+        { "isim": "FerroW", "madde": "Manganese", "yüzde": "0.18" },
+        { "isim": "FerroW", "madde": "Phosphorus", "yüzde": "0.06" },
+        { "isim": "FerroW", "madde": "Silicon", "yüzde": "0.56" },
+        { "isim": "FerroW", "madde": "Sulfur", "yüzde": "0.06" },
+        { "isim": "FerroW", "madde": "Tungsten", "yüzde": "77.98" }
+    ]
+}
